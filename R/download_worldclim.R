@@ -59,7 +59,7 @@ download_worldclim <- function(period = "current",
                                # gcm, #not implemented
                                # ssp, #not implemented
                                folder_path = "./WorldClim_data",
-                               file_type = "zip",
+                               #file_type = "zip",
                                # use_hive = file_type %in% c("zip"),
                                .token = "default"
                                ){
@@ -72,8 +72,7 @@ download_worldclim <- function(period = "current",
   if(.token == "default") .token <- gh::gh_token()
 
   file_list <- piggyback::pb_list(repo = "brunomioto/WorldClimData",
-                                  .token = .token
-                                  )
+                                  .token = .token)
 
   file_download <- file_list[which(
     grepl(paste("worldclim",
@@ -112,7 +111,7 @@ download_worldclim <- function(period = "current",
 
   piggyback::pb_download(
     file = subset(cheking_files, exists == FALSE)$file_name,
-    dest = "./WorldClim_data",
+    dest = folder_path,
     repo = "brunomioto/WorldClimData",
     overwrite = TRUE,
     .token = .token
@@ -127,8 +126,8 @@ download_worldclim <- function(period = "current",
     dplyr::mutate(file_name2 = stringr::str_remove_all(file_name,"\\.zip"))
 
   purrr::map(file_download2$file_name2,
-             .f = ~unzip(zipfile = paste0('WorldClim_data/', .x,".zip"),
-                         exdir = paste0('WorldClim_data_unzipped/',.x)))
+             .f = ~unzip(zipfile = paste0(folder_path,"/", .x,".zip"),
+                         exdir = paste0(folder_path,"_unzipped/",.x)))
   }
 
   cli::cli_alert_success("Done")

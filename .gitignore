@@ -30,3 +30,12 @@ worldclim_base_v21_future_tmax_10m.csv
 spp_data.csv
 teste
 WorldClim_data_unzipped
+WorldClim_data
+worldclim_base_v21_current_elev_2_5m.zip
+worldclim_base_v21_current_prec_2_5m.zip
+worldclim_base_v21_current_srad_5m.zip
+worldclim_base_v21_current_tavg_5m.zip
+worldclim_base_v21_current_tmax_5m.zip
+worldclim_base_v21_current_tmin_5m.zip
+worldclim_base_v21_current_vapr_5m.zip
+worldclim_base_v21_current_wind_5m.zip
