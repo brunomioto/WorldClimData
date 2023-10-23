@@ -1,0 +1,48 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# WorldClimData
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of WorldClimData is to present a faster way to download WorldClim data
+
+## Installation
+
+You can install the development version of WorldClimData from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("remotes")
+remotes::install_github("brunomioto/WorldClimData")
+```
+
+## Example
+
+The function `download_worldclim` will download worldclim zipped data to a **WorldClim_data** folder and the unzipped .tiff files to a **WorldClim_data_unzipped** folder inside the working directory.
+
+```{r, echo=FALSE, message=FALSE}
+devtools::load_all()
+```
+
+```{r, eval=FALSE}
+library(WorldClimData)
+```
+
+```{r example}
+download_worldclim(variable = "elev",
+                   resolution = 10)
+
+```
