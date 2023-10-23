@@ -61,3 +61,15 @@ download_worldclim(period = "current",
 #> i Files downloaded. Unzipping...
 #> v Done
 ```
+
+The example above creates 2 folders (WorldClim_data and
+WorldClim_data_unzipped) and downloads data of **Elevation** variable
+for **Current** period with a **10’** resolution.
+
+``` r
+Working directory
+├── WorldClim_data
+│   └── worldclim_base_v21_current_elev_10m.zip
+└── WorldClim_data_unzipped
+    └── wc2.1_10m_elev.tif
+```
