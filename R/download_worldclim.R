@@ -74,6 +74,8 @@ download_worldclim <- function(period = "current",
   file_list <- piggyback::pb_list(repo = "brunomioto/WorldClimData",
                                   .token = .token)
 
+  if(resolution == 2.5){resolution <- "2_5"}
+
   file_download <- file_list[which(
     grepl(paste("worldclim",
                 "base",
@@ -82,7 +84,7 @@ download_worldclim <- function(period = "current",
                 paste0("(",
                        paste(variable,collapse = "|"),
                        ")"),
-                paste0(resolution,"m"),
+                paste0(resolution,"(m|s)"),
                 sep = "_"), x=file_list$file_name)), ,
     drop = FALSE]
 
@@ -103,7 +105,6 @@ download_worldclim <- function(period = "current",
   if(length(subset(cheking_files, exists == FALSE)$file_name) > 0){
   cli::cli_alert_info("Downloading the following files")
   cli::cli_bullets(subset(cheking_files, exists == FALSE)$file_name)
-  }
 
   # all_releases <- piggyback::pb_releases(repo = "brunomioto/WorldClimData",
   #                                        verbose = FALSE,
@@ -117,6 +118,7 @@ download_worldclim <- function(period = "current",
     .token = .token
   )
 
+  }
 # unzip
   if(length(subset(cheking_files, exists == FALSE)$file_name) > 0){
   cli::cli_alert_info("Files downloaded. Unzipping...")

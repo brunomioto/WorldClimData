@@ -10,7 +10,8 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 <!-- badges: end -->
 
 The goal of WorldClimData is to present a faster way to download
-WorldClim data
+[WorldClim](https://www.worldclim.org/) data using
+[piggyback](https://docs.ropensci.org/piggyback/index.html)
 
 ## Installation
 
@@ -24,9 +25,10 @@ remotes::install_github("brunomioto/WorldClimData")
 
 ## Data
 
-Currently, WorldClimData don’t have all WorldClim data.
+Currently WorldClimData doesn’t have all WorldClim data.
 
-There is data only for **current** period and the following resolution:
+There is only data for the **current** period and the following
+resolution:
 
 - 10’ resolution: All the variables
   (“bio”,“elev”,“prec”,“srad”,“tavg”,“tmax”,“tmin”,“vapr”,“wind”)
@@ -34,17 +36,18 @@ There is data only for **current** period and the following resolution:
 - 5’ resolution: All the variables
   (“bio”,“elev”,“prec”,“srad”,“tavg”,“tmax”,“tmin”,“vapr”,“wind”)
 
-- 2.5’ resolution: “elev”,“prec”
+- 2.5’ resolution: All the variables
+  (“bio”,“elev”,“prec”,“srad”,“tavg”,“tmax”,“tmin”,“vapr”,“wind”)
 
-- 30” resolution:
+- 30” resolution: “elev”, “wind”
 
 ## Example
 
-The function `download_worldclim` will download worldclim zipped data to
-a **WorldClim_data** folder and the unzipped .tiff files to a
-**WorldClim_data_unzipped** folder inside the working directory.
+The `download_worldclim` function will download the zipped worldclim
+data into a **WorldClim_data** folder and the unzipped .tiff files into
+a **WorldClim_data_unzipped** folder inside the working directory.
 
-The folder name can be specified inside the function using the
+The folder name can be specified within the function using the
 `folder_path` argument.
 
 ``` r
@@ -62,9 +65,10 @@ download_worldclim(period = "current",
 #> v Done
 ```
 
-The example above creates 2 folders (WorldClim_data and
-WorldClim_data_unzipped) and downloads data of **Elevation** variable
-for **Current** period with a **10’** resolution.
+The above example creates 2 folders (WorldClim_data and
+WorldClim_data_unzipped) and downloads data for the **Elevation**
+variable for the **Current** period with a **10’** resolution. The
+folder structure is presented below.
 
 ``` r
 Working directory
