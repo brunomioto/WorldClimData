@@ -4,20 +4,21 @@
 \name{WorldClimData-package}
 \alias{WorldClimData}
 \alias{WorldClimData-package}
-\title{WorldClimData: What the Package Does (One Line, Title Case)}
+\title{WorldClimData: Download WorldClim Data}
 \description{
-What the package does (one paragraph).
+A faster way to download WorldClim data.
 }
 \seealso{
 Useful links:
 \itemize{
   \item \url{https://github.com/brunomioto/WorldClimData}
+  \item \url{https://brunomioto.github.io/WorldClimData/}
   \item Report bugs at \url{https://github.com/brunomioto/WorldClimData/issues}
 }
 
 }
 \author{
-\strong{Maintainer}: First Last \email{first.last@example.com} (\href{https://orcid.org/YOUR-ORCID-ID}{ORCID})
+\strong{Maintainer}: Bruno Mioto \email{brunomioto97@gmail.com}
 
 }
 \keyword{internal}

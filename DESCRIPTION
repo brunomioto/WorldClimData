@@ -1,16 +1,15 @@
 Package: WorldClimData
-Title: What the Package Does (One Line, Title Case)
+Title: Download WorldClim Data
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+    person("Bruno", "Mioto", , "brunomioto97@gmail.com", role = c("aut", "cre"))
+Description: A faster way to download WorldClim data.
+License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
-URL: https://github.com/brunomioto/WorldClimData
+URL: https://github.com/brunomioto/WorldClimData,
+    https://brunomioto.github.io/WorldClimData/
 BugReports: https://github.com/brunomioto/WorldClimData/issues
 Imports: 
     cli,
